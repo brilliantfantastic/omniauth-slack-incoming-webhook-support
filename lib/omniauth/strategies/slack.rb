@@ -28,7 +28,7 @@ module OmniAuth
       end
 
       extra do
-        {:raw_info => raw_info, :scope_info => {:incoming_webhook => access_token.params["incoming_webhook"]}}
+        {:raw_info => raw_info, :scope_info => {:incoming_webhook => access_token.params["incoming_webhook"].to_hash}}
       end
 
       def raw_info
